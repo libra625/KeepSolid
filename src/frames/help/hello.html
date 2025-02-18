@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends Information</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #timer {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Welcome Section (Привітання) -->
+<div class="container text-center mt-5">
+  <h1 class="display-4">Привітання!</h1>
+  <p class="lead">Welcome to our page, where you can find information about our amazing friends!</p>
+</div>
+
+<!-- Timer Section -->
+<div class="container text-center mt-4">
+  <p id="timer">Time spent on this page: 0 seconds</p>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- Timer Script -->
+<script>
+  let seconds = 0;
+  let timerElement = document.getElementById('timer');
+
+  // Function to update the time spent
+  function updateTime() {
+    seconds++;
+    timerElement.textContent = `Time spent on this page: ${seconds} seconds`;
+  }
+
+  // Update every second
+  setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
